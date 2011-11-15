@@ -1,0 +1,13 @@
+<div style="position:absolute; top: 380px">
+
+<h1> </h1>
+
+<%= form_tag('show', :method=>'post') do %>
+<div class="field">
+	<%= label_tag 'Choose Query' %>
+	<%= text_field_tag 'password' %>
+	</div>
+	
+	<p><%=submit_tag 'Submit'%></p>
+<% end %>
+</div>

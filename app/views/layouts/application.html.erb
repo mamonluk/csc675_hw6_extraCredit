@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Myapp2</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<h1>CSC 675 HW#6 Extra Credit: Web App</h1>
+<p><b>Author: Hanzen Lim</b><p>
+<div style="position: absolute; top:100px; left: 10px;" >
+<p>Customer</p>
+<table border="1" cellpadding="2" >
+<tr>
+	<th>license</th><th>cname</th><th>addr</th><th>phone</th>
+</tr>	
+<tr>
+	<td>999</td><td>kobe</td><td>sf</td><td>4158051102</td>
+</tr>
+<tr>
+	<td>998</td><td>andrew</td><td>la</td><td>510410232</td>
+</tr>
+</table>
+</div>
+<div style="position:absolute; top:100px; left: 280px;">
+<p>Car</p>
+<table border="1" cellpadding="2" >
+<tr>
+	<th>vin</th><th>make</th><th>model</th><th>color</th><th>seller</th><th>purchase_by</th>
+</tr>	
+<tr>
+	<td>123</td><td>toyota</td><td>yaris</td><td>green</td><td>Mark Jackson</td><td>999</td>
+</tr>
+<tr>
+	<td>124</td><td>toyota</td><td>camry</td><td>blue</td><td>Mark Jackson</td><td>998</td>
+</tr>
+</table>
+</div>
+
+<div style="position:absolute; top:100px; left: 670px;">
+<p>Test Drive</p>
+<table border="1" cellpadding="2" >
+<tr>
+	<th>vin</th><th>license</th><th>date</th>
+</tr>	
+<tr>
+	<td>123</td><td>999</td><td>11/1/2011</td>
+</tr>
+<tr>
+	<td>123</td><td>998</td><td>10/23/2011</td>
+</tr>
+</table>
+</div>
+
+<div style="position:absolute; top:100px; left: 870px;">
+<p>Sales Rep</p>
+<table border="1" cellpadding="2" >
+<tr>
+	<th>name</th><th>dept</th><th>phone</th>
+</tr>	
+<tr>
+	<td>Doc Rivers</td><td>boston</td><td>4158061103</td>
+</tr>
+<tr>
+	<td>Mark Jackson</td><td>sf</td><td>5108061104</td>
+</tr>
+</table>
+</div>
+
+<div style="position:absolute; top:250px; ">
+
+	<p>Enter 1: Query: Find the cnames and phones of all customers who have test driven ‘green’ cars</p>
+	<p>Enter 2: Query: Find the vins of all cars that were purchased by a customer who also test drove them.</p>
+	<p>Enter 3: Query: Find the names of sales-reps who have sold a car that was test driven by someone who lives in ‘San Francisco’.</p>
+</div>
+<%= yield %>
+
+</body>
+</html>
